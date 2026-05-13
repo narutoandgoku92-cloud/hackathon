@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GhostShield AI — Eliminate Ghost Workers with AI-Powered Payroll Intelligence</title>
+  <meta name="description" content="GhostShield AI detects ghost workers using biometric verification, attendance intelligence, payroll anomaly detection, and behavioral analytics." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== PARTICLE BACKGROUND CANVAS ===== -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" aria-label="GhostShield AI Home">
+        <div class="logo-icon">
+          <i class="fas fa-shield-halved"></i>
+          <span class="logo-pulse"></span>
+        </div>
+        <span class="logo-text">GhostShield <span class="logo-accent">AI</span></span>
+      </a>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="#security" class="nav-link">Security</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#" class="btn btn-ghost">Sign In</a>
+        <a href="#contact" class="btn btn-primary">Request Demo</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="hero-bg">
+        <div class="cyber-grid"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+      </div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>Live AI Fraud Detection — Government-Certified Platform</span>
+          </div>
+          <h1 id="hero-heading" class="hero-title">
+            Eliminate <span class="gradient-text">Ghost Workers</span> with AI-Powered Payroll Intelligence
+          </h1>
+          <p class="hero-subtitle">
+            Advanced biometric & face verification, real-time payroll anomaly detection, and attendance intelligence protecting government agencies across Nigeria from payroll fraud — saving billions in public funds.
+          </p>
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-primary btn-lg">
+              <i class="fas fa-rocket"></i>
+              Request Demo
+            </a>
+            <a href="#dashboard-preview" class="btn btn-outline btn-lg">
+              <i class="fas fa-play-circle"></i>
+              Run Fraud Scan
+            </a>
+          </div>
+          <div class="hero-trust">
+            <div class="trust-item">
+              <i class="fas fa-check-circle"></i>
+              <span>NDPR Compliant</span>
+            </div>
+            <div class="trust-item">
+              <i class="fas fa-check-circle"></i>
+              <span>SOC 2 Certified</span>
+            </div>
+            <div class="trust-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Encrypted at Rest</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-dashboard">
+          <div class="dashboard-mockup">
+            <div class="mockup-header">
+              <div class="mockup-controls">
+                <span class="ctrl red"></span>
+                <span class="ctrl yellow"></span>
+                <span class="ctrl green"></span>
+              </div>
+              <span class="mockup-title">GhostShield — Live Detection Feed</span>
+              <span class="mockup-status"><span class="pulse-dot"></span> LIVE</span>
+            </div>
+            <div class="mockup-body">
+              <div class="mockup-row">
+                <div class="mini-card alert-card">
+                  <div class="mini-card-header">
+                    <i class="fas fa-triangle-exclamation"></i>
+                    <span>Biometric Mismatch Alerts</span>
+                    <span class="badge badge-danger">12 New</span>
+                  </div>
+                  <div class="alert-list">
+                    <div class="alert-item">
+                      <div class="alert-avatar danger"></div>
+                      <div class="alert-info">
+                        <span class="alert-name">Emp #GS-04721</span>
+                        <span class="alert-detail">Face mismatch — 3 consecutive failures</span>
+                      </div>
+                      <span class="risk-badge high">HIGH</span>
+                    </div>
+                    <div class="alert-item">
+                      <div class="alert-avatar warning"></div>
+                      <div class="alert-info">
+                        <span class="alert-name">Emp #GS-09183</span>
+                        <span class="alert-detail">Fingerprint conflict detected</span>
+                      </div>
+                      <span class="risk-badge medium">MED</span>
+                    </div>
+                    <div class="alert-item">
+                      <div class="alert-avatar danger"></div>
+                      <div class="alert-info">
+                        <span class="alert-name">Emp #GS-02247</span>
+                        <span class="alert-detail">Ghost record — no biometric data</span>
+                      </div>
+                      <span class="risk-badge high">HIGH</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mini-card score-card">
+                  <div class="mini-card-header">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Anomaly Risk Score</span>
+                  </div>
+                  <div class="risk-meter">
+                    <div class="meter-ring">
+                      <svg viewBox="0 0 100 100">
+                        <circle class="ring-bg" cx="50" cy="50" r="40" />
+                        <circle class="ring-fill danger-ring" cx="50" cy="50" r="40" stroke-dasharray="188 251" />
+                      </svg>
+                      <div class="meter-value">
+                        <span class="value-num">74.8</span>
+                        <span class="value-label">Risk %</span>
+                      </div>
+                    </div>
+                    <div class="score-breakdown">
+                      <div class="score-item">
+                        <span class="score-dot red"></span>
+                        <span>High Risk</span>
+                        <span class="score-num">247</span>
+                      </div>
+                      <div class="score-item">
+                        <span class="score-dot yellow"></span>
+                        <span>Medium</span>
+                        <span class="score-num">891</span>
+                      </div>
+                      <div class="score-item">
+                        <span class="score-dot green"></span>
+                        <span>Safe</span>
+                        <span class="score-num">12,441</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mockup-row">
+                <div class="mini-card chart-card">
+                  <div class="mini-card-header">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Payroll Anomaly Trend</span>
+                    <span class="badge badge-warning">+23% this week</span>
+                  </div>
+                  <canvas id="heroChart" height="90"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STATS STRIP ===== -->
+    <section class="stats-strip" aria-label="Platform statistics">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item reveal">
+            <span class="stat-number" data-target="2.4" data-suffix="B" data-prefix="₦">0</span>
+            <span class="stat-label">Saved in Fraud Prevention</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item reveal">
+            <span class="stat-number" data-target="98.7" data-suffix="%" data-prefix="">0</span>
+            <span class="stat-label">Fraud Detection Accuracy</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item reveal">
+            <span class="stat-number" data-target="500" data-suffix="K+" data-prefix="">0</span>
+            <span class="stat-label">Employee Records Processed</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item reveal">
+            <span class="stat-number" data-target="120" data-suffix="+" data-prefix="">0</span>
+            <span class="stat-label">Government Agencies Protected</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES SECTION ===== -->
+    <section class="features" id="features" aria-labelledby="features-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Core Capabilities</span>
+          <h2 id="features-heading" class="section-title">Powered by <span class="gradient-text">Advanced AI Intelligence</span></h2>
+          <p class="section-subtitle">Eight integrated modules working in harmony to detect, prevent, and eliminate payroll fraud before it costs your agency another naira.</p>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card reveal" style="--delay: 0.05s">
+            <div class="feature-icon purple">
+              <i class="fas fa-fingerprint"></i>
+            </div>
+            <h3 class="feature-title">Biometric Verification Engine</h3>
+            <p class="feature-desc">Multi-modal biometric authentication using facial recognition and fingerprint matching to confirm employee identity at every payroll cycle.</p>
+            <div class="feature-footer">
+              <span class="feature-tag">99.3% accuracy</span>
+              <i class="fas fa-arrow-right feature-arrow"></i>
+            </div>
+          </article>
+
+          <article class="feature-card reveal" style="--delay: 0.1s">
+            <div class="feature-icon cyan">
+              <i class="fas fa-calendar-days"></i>
+            </div>
+            <h3 class="feature-title">Attendance Pattern Analysis</h3>
+            <p class="feature-desc">AI-powered analysis of attendance records to detect irregular patterns, proxy attendance, and ghost employee schemes across all locations.</p>
+            <div class="feature-footer">
+              <span class="feature-tag">Real-time sync</span>
+              <i class="fas fa-arrow-right feature-arrow"></i>
+            </div>
+          </article>
+
+          <article class="feature-card reveal" style="--delay: 0.15s">
+            <div class="feature-icon magenta">
+              <i class="fas fa-magnifying-glass-dollar"></i>
+            </div>
+            <h3 class="feature-title">Payroll Fraud Detection</h3>
+            <p class="feature-desc">Deep analysis of salary structures, duplicate entries, phantom salaries, and unauthorized pay modifications across multiple agencies simultaneously.</p>
+            <div class="feature-footer">
+              <span class="feature-tag">₦2.4B recovered</span>
+              <i class="fas fa-arrow-right feature-arrow"></i>
+            </div>
+          </article>
+
+          <article class="feature-card reveal" style="--delay: 0.2s">
+            <div class="feature-icon purple">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3 class="feature-title">AI Anomaly Scoring</h3>
+            <p class="feature-desc">Machine learning models assign real-time risk scores to every employee record, flagging outliers with color-coded severity levels for immediate action.</p>
+            <div class="feature-footer">
+              <span class="feature-tag">ML-powered</span>
+              <i class="fas fa-arrow-right feature-arrow"></i>
+            </div>
+          </article>
+
+          <article class="feature-card reveal" style="--delay: 0.25s">
+            <div class="feature-icon cyan">
+              <i class="fas fa-building-columns"></i>
+            </div>
+            <h3 class="feature-title">Multi-Agency Monitoring</h3>
+            <p class="feature-desc">Centralized oversight across 120+ federal and state agencies with cross-agency deduplication to detect employees drawing multiple salaries.</p>
+            <div class="feature-footer">
+              <span class="feature-tag">120+ agencies</span>
+              <i class="fas fa-arrow-right feature-arrow"></i>
+            </div>
+          </article>
+
+          <article class="feature-card reveal" style="--delay: 0.3s">
+            <div class="feature-icon magenta">
+              <i class="fas fa-bell-exclamation"></i>
+            </div>
+            <h3 class="feature-title">Real-Time Risk Alerts</h3>
+            <p class="feature-desc">Instant notifications via SMS, email, and in-platform alerts the moment suspicious activity is detected, enabling rapid investigation response.</p>
+            <div class="feature-footer">
+              <span class="feature-tag">&lt;2s response</span>
+              <i class="fas fa-arrow-right feature-arrow"></i>
+            </div>
+          </article>
+
+          <article class="feature-card reveal" style="--delay: 0.35s">
+            <div class="feature-icon purple">
+              <i class="fas fa-file-shield"></i>
+            </div>
+            <h3 class="feature-title">Audit Trail & Compliance</h3>
+            <p class="feature-desc">Immutable, tamper-proof audit logs of every action taken on the platform — court-admissible evidence for fraud prosecution and regulatory compliance.</p>
+            <div class="feature-footer">
+              <span class="feature-tag">Court-admissible</span>
+              <i class="fas fa-arrow-right feature-arrow"></i>
+            </div>
+          </article>
+
+          <article class="feature-card reveal" style="--delay: 0.4s">
+            <div class="feature-icon cyan">
+              <i class="fas fa-user-check"></i>
+            </div>
+            <h3 class="feature-title">Facial/Fingerprint Matching</h3>
+            <p class="feature-desc">Cross-reference biometric data against national identity databases to detect cloned identities, impersonation, and fraudulent employee enrollments.</p>
+            <div class="feature-footer">
+              <span class="feature-tag">NIN integrated</span>
+              <i class="fas fa-arrow-right feature-arrow"></i>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DASHBOARD PREVIEW ===== -->
+    <section class="dashboard-preview" id="dashboard-preview" aria-labelledby="dashboard-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Intelligence Center</span>
+          <h2 id="dashboard-heading" class="section-title">See Fraud <span class="gradient-text">Before It Happens</span></h2>
+          <p class="section-subtitle">A comprehensive analytics command center giving investigators and administrators total visibility into payroll integrity.</p>
+        </div>
+        <div class="dashboard-frame reveal">
+          <div class="dash-topbar">
+            <div class="dash-logo">
+              <i class="fas fa-shield-halved"></i>
+              <span>GhostShield AI — Command Center</span>
+            </div>
+            <div class="dash-nav-tabs">
+              <button class="dash-tab active" data-tab="overview">Overview</button>
+              <button class="dash-tab" data-tab="employees">Employees</button>
+              <button class="dash-tab" data-tab="payroll">Payroll</button>
+              <button class="dash-tab" data-tab="biometrics">Biometrics</button>
+            </div>
+            <div class="dash-actions">
+              <button class="dash-btn" aria-label="Notifications"><i class="fas fa-bell"></i><span class="notif-badge">8</span></button>
+              <button class="dash-btn" aria-label="Settings"><i class="fas fa-gear"></i></button>
+              <div class="dash-user">
+                <div class="dash-avatar">JO</div>
+                <span>J. Okafor</span>
+              </div>
+            </div>
+          </div>
+          <div class="dash-body">
+            <aside class="dash-sidebar" aria-label="Dashboard navigation">
+              <nav>
+                <a href="#" class="dash-nav-item active"><i class="fas fa-gauge-high"></i><span>Overview</span></a>
+                <a href="#" class="dash-nav-item"><i class="fas fa-users"></i><span>Employees</span></a>
+                <a href="#" class="dash-nav-item"><i class="fas fa-wallet"></i><span>Payroll</span></a>
+                <a href="#" class="dash-nav-item"><i class="fas fa-fingerprint"></i><span>Biometrics</span></a>
+                <a href="#" class="dash-nav-item"><i class="fas fa-triangle-exclamation"></i><span>Alerts</span><span class="nav-badge">8</span></a>
+                <a href="#" class="dash-nav-item"><i class="fas fa-map-location-dot"></i><span>Geo Map</span></a>
+                <a href="#" class="dash-nav-item"><i class="fas fa-file-chart-column"></i><span>Reports</span></a>
+                <a href="#" class="dash-nav-item"><i class="fas fa-sliders"></i><span>Settings</span></a>
+              </nav>
+            </aside>
+            <main class="dash-main">
+              <div class="dash-kpis">
+                <div class="kpi-card">
+                  <div class="kpi-icon kpi-red"><i class="fas fa-ghost"></i></div>
+                  <div class="kpi-data">
+                    <span class="kpi-value">1,247</span>
+                    <span class="kpi-label">Ghost Workers Detected</span>
+                    <span class="kpi-change up">+23 this month</span>
+                  </div>
+                </div>
+                <div class="kpi-card">
+                  <div class="kpi-icon kpi-yellow"><i class="fas fa-triangle-exclamation"></i></div>
+                  <div class="kpi-data">
+                    <span class="kpi-value">₦482M</span>
+                    <span class="kpi-label">Fraudulent Payroll Flagged</span>
+                    <span class="kpi-change down">-12% vs last month</span>
+                  </div>
+                </div>
+                <div class="kpi-card">
+                  <div class="kpi-icon kpi-purple"><i class="fas fa-fingerprint"></i></div>
+                  <div class="kpi-data">
+                    <span class="kpi-value">98.7%</span>
+                    <span class="kpi-label">Biometric Match Rate</span>
+                    <span class="kpi-change up">+0.3% accuracy</span>
+                  </div>
+                </div>
+                <div class="kpi-card">
+                  <div class="kpi-icon kpi-cyan"><i class="fas fa-shield-check"></i></div>
+                  <div class="kpi-data">
+                    <span class="kpi-value">120</span>
+                    <span class="kpi-label">Agencies Monitored</span>
+                    <span class="kpi-change up">+5 new agencies</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dash-charts">
+                <div class="chart-panel panel-lg">
+                  <div class="panel-header">
+                    <h4>Payroll Fraud Trend — 2024</h4>
+                    <div class="panel-controls">
+                      <button class="pill active">Monthly</button>
+                      <button class="pill">Weekly</button>
+                    </div>
+                  </div>
+                  <canvas id="fraudTrendChart" height="200"></canvas>
+                </div>
+                <div class="chart-panel panel-sm">
+                  <div class="panel-header">
+                    <h4>Risk Distribution</h4>
+                  </div>
+                  <canvas id="riskDonutChart" height="200"></canvas>
+                  <div class="donut-legend">
+                    <div class="dl-item"><span class="dl-dot" style="background:#ef4444"></span>High Risk (15%)</div>
+                    <div class="dl-item"><span class="dl-dot" style="background:#f59e0b"></span>Medium (28%)</div>
+                    <div class="dl-item"><span class="dl-dot" style="background:#10b981"></span>Low Risk (57%)</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dash-table-section">
+                <div class="panel-header">
+                  <h4>Employee Risk Scoring — High Priority</h4>
+                  <button class="btn-sm btn-primary-sm">View All</button>
+                </div>
+                <div class="risk-table-wrapper">
+                  <table class="risk-table" aria-label="Employee risk scoring table">
+                    <thead>
+                      <tr>
+                        <th>Employee ID</th>
+                        <th>Name</th>
+                        <th>Agency</th>
+                        <th>Risk Score</th>
+                        <th>Anomaly Type</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="row-high">
+                        <td>GS-04721</td>
+                        <td class="name-cell"><div class="t-avatar danger"></div>A. Ibrahim</td>
+                        <td>Min. of Finance</td>
+                        <td><div class="risk-bar-wrap"><div class="risk-bar" style="width:91%;background:#ef4444"></div><span>91</span></div></td>
+                        <td><span class="tag-pill danger-pill">Biometric Fail</span></td>
+                        <td><span class="status-pill status-flagged">Flagged</span></td>
+                        <td><button class="action-btn">Investigate</button></td>
+                      </tr>
+                      <tr class="row-high">
+                        <td>GS-09183</td>
+                        <td class="name-cell"><div class="t-avatar danger"></div>O. Chukwu</td>
+                        <td>NNPC Corp.</td>
+                        <td><div class="risk-bar-wrap"><div class="risk-bar" style="width:87%;background:#ef4444"></div><span>87</span></div></td>
+                        <td><span class="tag-pill danger-pill">Duplicate Salary</span></td>
+                        <td><span class="status-pill status-flagged">Flagged</span></td>
+                        <td><button class="action-btn">Investigate</button></td>
+                      </tr>
+                      <tr class="row-medium">
+                        <td>GS-02247</td>
+                        <td class="name-cell"><div class="t-avatar warning"></div>K. Adeyemi</td>
+                        <td>Min. of Works</td>
+                        <td><div class="risk-bar-wrap"><div class="risk-bar" style="width:72%;background:#f59e0b"></div><span>72</span></div></td>
+                        <td><span class="tag-pill warning-pill">Ghost Record</span></td>
+                        <td><span class="status-pill status-review">Under Review</span></td>
+                        <td><button class="action-btn">View Report</button></td>
+                      </tr>
+                      <tr class="row-medium">
+                        <td>GS-11829</td>
+                        <td class="name-cell"><div class="t-avatar warning"></div>B. Musa</td>
+                        <td>State Govt. Kano</td>
+                        <td><div class="risk-bar-wrap"><div class="risk-bar" style="width:68%;background:#f59e0b"></div><span>68</span></div></td>
+                        <td><span class="tag-pill warning-pill">Absence Pattern</span></td>
+                        <td><span class="status-pill status-review">Under Review</span></td>
+                        <td><button class="action-btn">View Report</button></td>
+                      </tr>
+                      <tr class="row-low">
+                        <td>GS-05512</td>
+                        <td class="name-cell"><div class="t-avatar safe"></div>F. Okonkwo</td>
+                        <td>Min. of Health</td>
+                        <td><div class="risk-bar-wrap"><div class="risk-bar" style="width:28%;background:#10b981"></div><span>28</span></div></td>
+                        <td><span class="tag-pill safe-pill">Minor Variance</span></td>
+                        <td><span class="status-pill status-clear">Cleared</span></td>
+                        <td><button class="action-btn action-clear">Review</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="dash-insights">
+                <div class="insights-panel">
+                  <div class="panel-header">
+                    <h4><i class="fas fa-brain"></i> AI Fraud Insights</h4>
+                    <span class="live-badge"><span class="pulse-dot"></span> Live</span>
+                  </div>
+                  <ul class="insight-list">
+                    <li class="insight-item insight-high">
+                      <i class="fas fa-circle-xmark"></i>
+                      <div>
+                        <strong>Cluster of 14 employees</strong> in Ministry of Finance share identical bank account numbers — high probability of coordinated fraud ring.
+                      </div>
+                    </li>
+                    <li class="insight-item insight-medium">
+                      <i class="fas fa-circle-exclamation"></i>
+                      <div>
+                        <strong>47 employees</strong> have not reported to duty in 90+ days but continue to receive full salary — immediate audit recommended.
+                      </div>
+                    </li>
+                    <li class="insight-item insight-medium">
+                      <i class="fas fa-circle-exclamation"></i>
+                      <div>
+                        <strong>Cross-agency duplicate detected:</strong> 3 employee IDs drawing salary from both Federal and Lagos State payrolls simultaneously.
+                      </div>
+                    </li>
+                    <li class="insight-item insight-low">
+                      <i class="fas fa-circle-info"></i>
+                      <div>
+                        <strong>Seasonal anomaly flagged:</strong> 12% spike in new employee registrations in FCT Abuja without corresponding department approvals.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="geo-panel">
+                  <div class="panel-header">
+                    <h4><i class="fas fa-map-location-dot"></i> Geographic Risk Map — Nigeria</h4>
+                  </div>
+                  <div class="geo-map">
+                    <div class="map-placeholder">
+                      <div class="map-bg">
+                        <div class="map-hotspot hs-1" title="Abuja FCT — High Risk"><span class="hs-dot red"></span><span class="hs-label">FCT Abuja</span></div>
+                        <div class="map-hotspot hs-2" title="Lagos State — Medium Risk"><span class="hs-dot yellow"></span><span class="hs-label">Lagos</span></div>
+                        <div class="map-hotspot hs-3" title="Kano State — High Risk"><span class="hs-dot red"></span><span class="hs-label">Kano</span></div>
+                        <div class="map-hotspot hs-4" title="Rivers State — Medium Risk"><span class="hs-dot yellow"></span><span class="hs-label">Rivers</span></div>
+                        <div class="map-hotspot hs-5" title="Kaduna — Low Risk"><span class="hs-dot green"></span><span class="hs-label">Kaduna</span></div>
+                      </div>
+                    </div>
+                    <div class="geo-legend">
+                      <span><span class="hs-dot red"></span> High Risk</span>
+                      <span><span class="hs-dot yellow"></span> Medium</span>
+                      <span><span class="hs-dot green"></span> Low Risk</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="how-it-works" id="how-it-works" aria-labelledby="hiw-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Simple Process</span>
+          <h2 id="hiw-heading" class="section-title">Four Steps to <span class="gradient-text">Fraud-Free Payroll</span></h2>
+          <p class="section-subtitle">From data upload to actionable fraud reports — GhostShield AI delivers complete payroll intelligence in four seamless steps.</p>
+        </div>
+        <div class="steps-container">
+          <div class="steps-line"></div>
+          <div class="steps-grid">
+            <div class="step-card reveal" style="--delay: 0s">
+              <div class="step-number">01</div>
+              <div class="step-icon-wrap purple-glow">
+                <i class="fas fa-cloud-arrow-up"></i>
+              </div>
+              <h3 class="step-title">Upload Payroll Data</h3>
+              <p class="step-desc">Securely import payroll records from IPPIS, GIFMIS, or any legacy HR system using our encrypted API connectors or direct file upload.</p>
+              <div class="step-tags">
+                <span>IPPIS</span><span>GIFMIS</span><span>CSV/Excel</span>
+              </div>
+            </div>
+            <div class="step-card reveal" style="--delay: 0.1s">
+              <div class="step-number">02</div>
+              <div class="step-icon-wrap cyan-glow">
+                <i class="fas fa-fingerprint"></i>
+              </div>
+              <h3 class="step-title">Sync Biometric Records</h3>
+              <p class="step-desc">Connect attendance systems and biometric databases — fingerprint scanners, facial recognition cameras, and NIN verification for complete identity validation.</p>
+              <div class="step-tags">
+                <span>NIN</span><span>BVN</span><span>Facial ID</span>
+              </div>
+            </div>
+            <div class="step-card reveal" style="--delay: 0.2s">
+              <div class="step-number">03</div>
+              <div class="step-icon-wrap magenta-glow">
+                <i class="fas fa-brain"></i>
+              </div>
+              <h3 class="step-title">AI Detects Anomalies</h3>
+              <p class="step-desc">Our proprietary ML models analyze 200+ behavioral and financial signals simultaneously, scoring every record and flagging ghost workers in real-time.</p>
+              <div class="step-tags">
+                <span>200+ Signals</span><span>Real-time</span><span>ML-powered</span>
+              </div>
+            </div>
+            <div class="step-card reveal" style="--delay: 0.3s">
+              <div class="step-number">04</div>
+              <div class="step-icon-wrap purple-glow">
+                <i class="fas fa-file-contract"></i>
+              </div>
+              <h3 class="step-title">Generate Fraud Report</h3>
+              <p class="step-desc">Receive comprehensive fraud investigation reports with evidence chains, risk scores, and actionable recommendations — ready for prosecution or administrative action.</p>
+              <div class="step-tags">
+                <span>PDF Export</span><span>Evidence Chain</span><span>Court-ready</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== IMPACT STATS ===== -->
+    <section class="impact" aria-labelledby="impact-heading">
+      <div class="impact-bg">
+        <div class="orb orb-impact-1"></div>
+        <div class="orb orb-impact-2"></div>
+      </div>
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Proven Results</span>
+          <h2 id="impact-heading" class="section-title">Trusted by <span class="gradient-text">Government Agencies</span> Nationwide</h2>
+        </div>
+        <div class="impact-grid">
+          <div class="impact-card reveal" style="--delay: 0s">
+            <div class="impact-icon"><i class="fas fa-naira-sign"></i></div>
+            <div class="impact-num counter" data-target="2.4" data-suffix="B" data-prefix="₦">₦0</div>
+            <div class="impact-label">Saved in Fraud Prevention</div>
+            <div class="impact-sub">Across all monitored agencies since 2022</div>
+          </div>
+          <div class="impact-card reveal" style="--delay: 0.1s">
+            <div class="impact-icon"><i class="fas fa-bullseye"></i></div>
+            <div class="impact-num counter" data-target="98.7" data-suffix="%" data-prefix="">0</div>
+            <div class="impact-label">Fraud Detection Accuracy</div>
+            <div class="impact-sub">Verified against independent audits</div>
+          </div>
+          <div class="impact-card reveal" style="--delay: 0.2s">
+            <div class="impact-icon"><i class="fas fa-users"></i></div>
+            <div class="impact-num counter" data-target="500" data-suffix="K+" data-prefix="">0</div>
+            <div class="impact-label">Employee Records Processed</div>
+            <div class="impact-sub">With zero data breaches to date</div>
+          </div>
+          <div class="impact-card reveal" style="--delay: 0.3s">
+            <div class="impact-icon"><i class="fas fa-building-columns"></i></div>
+            <div class="impact-num counter" data-target="120" data-suffix="+" data-prefix="">0</div>
+            <div class="impact-label">Government Agencies Protected</div>
+            <div class="impact-sub">Federal, State and Local levels</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Testimonials</span>
+          <h2 id="testimonials-heading" class="section-title">What Our <span class="gradient-text">Partners Say</span></h2>
+          <p class="section-subtitle">Trusted by senior government officials and finance directors across Nigeria's public sector.</p>
+        </div>
+        <div class="testimonials-grid">
+          <article class="testimonial-card reveal" style="--delay: 0s">
+            <div class="tcard-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <blockquote class="tcard-quote">
+              "GhostShield AI uncovered ₦847 million in ghost worker salary fraud within the first 90 days of deployment. The platform paid for itself 400 times over. It is the most impactful technology investment our ministry has ever made."
+            </blockquote>
+            <div class="tcard-author">
+              <div class="tcard-avatar avatar-1">AB</div>
+              <div class="tcard-info">
+                <strong>Dr. Amina Bello</strong>
+                <span>Director of Finance, Federal Ministry of Finance</span>
+                <span class="tcard-verified"><i class="fas fa-circle-check"></i> Verified Government Official</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal featured-testimonial" style="--delay: 0.1s">
+            <div class="tcard-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <blockquote class="tcard-quote">
+              "The biometric verification integration was seamless, and the AI accuracy is phenomenal. We identified 2,341 ghost workers across 23 parastatals in Lagos State — something 10 years of manual audits had completely missed."
+            </blockquote>
+            <div class="tcard-author">
+              <div class="tcard-avatar avatar-2">EO</div>
+              <div class="tcard-info">
+                <strong>Engr. Emeka Okafor</strong>
+                <span>Head of Civil Service, Lagos State Government</span>
+                <span class="tcard-verified"><i class="fas fa-circle-check"></i> Verified Government Official</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal" style="--delay: 0.2s">
+            <div class="tcard-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <blockquote class="tcard-quote">
+              "The real-time alerts and AI-generated reports give us everything we need for prosecution. GhostShield AI has transformed how EFCC approaches payroll fraud investigations — from months to days."
+            </blockquote>
+            <div class="tcard-author">
+              <div class="tcard-avatar avatar-3">FM</div>
+              <div class="tcard-info">
+                <strong>Fatima Mohammed</strong>
+                <span>Deputy Director, EFCC Financial Crimes Unit</span>
+                <span class="tcard-verified"><i class="fas fa-circle-check"></i> Verified Government Official</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECURITY & COMPLIANCE ===== -->
+    <section class="security" id="security" aria-labelledby="security-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Security & Compliance</span>
+          <h2 id="security-heading" class="section-title">Enterprise-Grade <span class="gradient-text">Security</span></h2>
+          <p class="section-subtitle">Built for government environments with the highest security standards — protecting sensitive payroll data with military-grade infrastructure.</p>
+        </div>
+        <div class="security-layout">
+          <div class="security-grid">
+            <div class="security-card reveal" style="--delay: 0s">
+              <div class="security-icon"><i class="fas fa-lock"></i></div>
+              <h3>End-to-End Encryption</h3>
+              <p>AES-256 encryption for all data at rest and in transit. Zero plaintext storage of sensitive biometric data.</p>
+            </div>
+            <div class="security-card reveal" style="--delay: 0.05s">
+              <div class="security-icon"><i class="fas fa-scale-balanced"></i></div>
+              <h3>NDPR/GDPR Compliance</h3>
+              <p>Full compliance with Nigeria Data Protection Regulation and international GDPR standards for data handling.</p>
+            </div>
+            <div class="security-card reveal" style="--delay: 0.1s">
+              <div class="security-icon"><i class="fas fa-cloud-check"></i></div>
+              <h3>Secure Cloud Infrastructure</h3>
+              <p>Deployed on FedRAMP-equivalent Nigerian government cloud with 99.99% uptime SLA and disaster recovery.</p>
+            </div>
+            <div class="security-card reveal" style="--delay: 0.15s">
+              <div class="security-icon"><i class="fas fa-users-gear"></i></div>
+              <h3>Role-Based Access Control</h3>
+              <p>Granular permission system with multi-factor authentication ensuring only authorized personnel access sensitive data.</p>
+            </div>
+            <div class="security-card reveal" style="--delay: 0.2s">
+              <div class="security-icon"><i class="fas fa-scroll"></i></div>
+              <h3>Comprehensive Audit Logging</h3>
+              <p>Every action logged immutably with timestamp, user ID, and device fingerprint — tamper-proof for regulatory inspection.</p>
+            </div>
+            <div class="security-card reveal" style="--delay: 0.25s">
+              <div class="security-icon"><i class="fas fa-certificate"></i></div>
+              <h3>SOC 2 Type II Certified</h3>
+              <p>Independently audited security controls with annual penetration testing and continuous vulnerability assessment.</p>
+            </div>
+          </div>
+          <div class="security-badges reveal">
+            <div class="compliance-strip">
+              <div class="compliance-badge"><i class="fas fa-shield-check"></i><span>NDPR Certified</span></div>
+              <div class="compliance-badge"><i class="fas fa-award"></i><span>SOC 2 Type II</span></div>
+              <div class="compliance-badge"><i class="fas fa-globe"></i><span>GDPR Ready</span></div>
+              <div class="compliance-badge"><i class="fas fa-fingerprint"></i><span>ISO 27001</span></div>
+              <div class="compliance-badge"><i class="fas fa-building-columns"></i><span>FedGovt Approved</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="cta-section" aria-labelledby="cta-heading">
+      <div class="cta-bg">
+        <div class="orb orb-cta-1"></div>
+        <div class="orb orb-cta-2"></div>
+      </div>
+      <div class="container">
+        <div class="cta-content reveal">
+          <span class="section-tag">Ready to Start?</span>
+          <h2 id="cta-heading" class="cta-title">Stop Ghost Workers <span class="gradient-text">Today</span></h2>
+          <p class="cta-sub">Join 120+ government agencies already protecting billions in public funds. Get a live demo and see GhostShield AI detect fraud in your own payroll data.</p>
+          <div class="cta-buttons">
+            <a href="#contact" class="btn btn-primary btn-xl">
+              <i class="fas fa-rocket"></i>
+              Request Free Demo
+            </a>
+            <a href="dashboard.html" class="btn btn-glass btn-xl">
+              <i class="fas fa-gauge-high"></i>
+              Explore Dashboard
+            </a>
+          </div>
+          <p class="cta-note">No credit card required · Government procurement supported · 90-day pilot available</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <span class="section-tag">Contact Us</span>
+            <h2 id="contact-heading" class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+            <p>Ready to protect your agency? Our government solutions team is standing by.</p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <strong>Email</strong>
+                  <span>contact@terminexteam</span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                <div>
+                  <strong>Phone</strong>
+                  <span>+234 (0) 800 GHOST-AI</span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-location-dot"></i></div>
+                <div>
+                  <strong>Office</strong>
+                  <span>University of Ibadan, Oyo State.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form-wrap reveal" style="--delay: 0.1s">
+            <form class="contact-form" id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input type="text" id="firstName" name="firstName" placeholder="John" required />
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" id="lastName" name="lastName" placeholder="Doe" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Official Email</label>
+                <input type="email" id="email" name="email" placeholder="john.doe@ministry.gov.ng" required />
+              </div>
+              <div class="form-group">
+                <label for="agency">Agency / Ministry</label>
+                <input type="text" id="agency" name="agency" placeholder="Federal Ministry of Finance" required />
+              </div>
+              <div class="form-group">
+                <label for="employees">Number of Employees</label>
+                <select id="employees" name="employees">
+                  <option value="">Select range</option>
+                  <option value="under500">Under 500</option>
+                  <option value="500-2000">500 – 2,000</option>
+                  <option value="2000-10000">2,000 – 10,000</option>
+                  <option value="over10000">Over 10,000</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us about your payroll challenges..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </button>
+              <div id="form-success" class="form-success" hidden>
+                <i class="fas fa-circle-check"></i>
+                Thank you! Our team will contact you within 24 hours.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#" class="nav-logo footer-logo">
+              <div class="logo-icon">
+                <i class="fas fa-shield-halved"></i>
+              </div>
+              <span class="logo-text">GhostShield <span class="logo-accent">AI</span></span>
+            </a>
+            <p class="footer-tagline">Eliminating ghost workers with AI-powered biometric verification and payroll intelligence for African governments.</p>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="newsletter-wrap">
+              <h4>Stay Updated</h4>
+              <form class="newsletter-form" id="newsletter-form">
+                <input type="email" placeholder="Enter your email" aria-label="Email for newsletter" required />
+                <button type="submit" aria-label="Subscribe"><i class="fas fa-arrow-right"></i></button>
+              </form>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#">API Documentation</a></li>
+              <li><a href="#">Integrations</a></li>
+              <li><a href="dashboard.html">Dashboard</a></li>
+              <li><a href="#">Changelog</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Documentation</a></li>
+              <li><a href="#">Security Policy</a></li>
+              <li><a href="#">Support Center</a></li>
+              <li><a href="#">Blog & Insights</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Status Page</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Press Kit</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Terminex Team. All rights reserved. | Oyo State, Nigeria</p>
+        <div class="footer-compliance">
+          <span><i class="fas fa-shield-check"></i> NDPR Compliant</span>
+          <span><i class="fas fa-lock"></i> AES-256 Encrypted</span>
+          <span><i class="fas fa-certificate"></i> SOC 2 Certified</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
